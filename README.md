@@ -28,7 +28,6 @@ These instructions will get you a copy of the project up and running on your loc
     DB_PASSWORD=postgres
     DB_DATABASE=postgres
     SESSION_DRIVER=cookie
-  
 
 3. Build the docker images
    ```sh
