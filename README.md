@@ -1,4 +1,4 @@
-# Project Name
+# Leonardo.ai Challenge
 
 ## Getting Started
 
