@@ -14,11 +14,7 @@ These instructions will get you a copy of the project up and running on your loc
 1. Clone the repo
    ```sh
    git clone https://github.com/garthtrickett/leonardo-test.git
-
-2. Build the docker images
-   ```sh
-   docker-compose build
-3. Add in .env
+2. Add in .env
    ````sh
     TZ=UTC
     PORT=3333
@@ -32,9 +28,15 @@ These instructions will get you a copy of the project up and running on your loc
     DB_PASSWORD=postgres
     DB_DATABASE=postgres
     SESSION_DRIVER=cookie
+  
+
+3. Build the docker images
+   ```sh
+   docker-compose build
 
 
-3. Start the docker containers
+
+4. Start the docker containers
    ```sh
    docker compose up
 
