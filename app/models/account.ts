@@ -4,7 +4,10 @@ import { v4 as uuidv4 } from 'uuid'
 
 export default class Account extends BaseModel {
   @column({ isPrimary: true })
-  declare id: number
+  declare id: string
+
+  @column()
+  declare name: string
 
   @column.dateTime({ autoCreate: true })
   declare createdAt: DateTime
