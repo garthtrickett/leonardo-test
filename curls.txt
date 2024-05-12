@@ -1,0 +1,22 @@
+
+NORMALLY I WOULD USE SOMETHING LIKE POSTMAN FOR THIS OR USE AN OPENAPI GENERATOR LIKE SWAGGER
+
+Find all tasks
+curl -X GET http://localhost:3333/tasks
+
+Insert a task
+curl -X POST http://localhost:3333/tasks \
+-H 'Content-Type: application/json' \
+-d '{
+  "accountId": "b0eebc99-9c0b-4ef8-bb6d-6bb9bd380a12",
+  "scheduleId": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+  "startTime": "2024-05-11T13:49:37.000Z",
+  "duration": 60,
+  "type": "work"
+}'
+
+Find task by Id
+curl -X GET http://localhost:3333/tasks/fbf972a5-634a-405b-a633-ebb707f5faac
+
+
+
