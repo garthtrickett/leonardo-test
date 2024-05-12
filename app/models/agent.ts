@@ -9,12 +9,6 @@ export default class Agent extends BaseModel {
   @column()
   declare name: string
 
-  @column.dateTime({ autoCreate: true })
-  declare createdAt: DateTime
-
-  @column.dateTime({ autoCreate: true, autoUpdate: true })
-  declare updatedAt: DateTime
-
   @beforeCreate()
   public static assignUuid(agent: Agent) {
     agent.id = uuidv4()

@@ -8,9 +8,8 @@
 */
 
 import router from '@adonisjs/core/services/router'
+import TasksController from '#controllers/tasks_controller'
 
-router.get('/', async () => {
-  return {
-    hello: 'world again',
-  }
-})
+router.get('tasks', [TasksController, 'index'])
+router.post('tasks', [TasksController, 'store'])
+router.get('tasks/:id', [TasksController, 'show'])

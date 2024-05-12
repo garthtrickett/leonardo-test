@@ -9,12 +9,6 @@ export default class Account extends BaseModel {
   @column()
   declare name: string
 
-  @column.dateTime({ autoCreate: true })
-  declare createdAt: DateTime
-
-  @column.dateTime({ autoCreate: true, autoUpdate: true })
-  declare updatedAt: DateTime
-
   @beforeCreate()
   public static assignUuid(account: Account) {
     account.id = uuidv4()
