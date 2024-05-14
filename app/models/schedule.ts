@@ -1,8 +1,7 @@
 import { DateTime } from 'luxon'
-import { BaseModel, column, belongsTo, beforeCreate } from '@adonisjs/lucid/orm'
+import { BaseModel, column, belongsTo, beforeCreate, hasMany } from '@adonisjs/lucid/orm'
 import Account from '#models/account'
 import Agent from '#models/agent'
-import { v4 as uuidv4 } from 'uuid'
 
 export default class Schedule extends BaseModel {
   @column({ isPrimary: true })
@@ -19,6 +18,8 @@ export default class Schedule extends BaseModel {
 
   @column.dateTime()
   declare endTime: DateTime
+
+  // I would put created_at and updated_at here for both Schedules and Tasks but im getting an error so leaving it out. Would investigate further on real project
 
   @belongsTo(() => Account)
   public account: BelongsTo<typeof Account>
