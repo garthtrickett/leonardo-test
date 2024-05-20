@@ -38,10 +38,9 @@ These instructions will get you a copy of the project up and running on your loc
    docker compose up
 
 ### Run tests and endpoints
+   ```sh
    docker exec -it leonardo-test-api-1        node ace test
-   
-
-Available endpoints and how to curl them are in the curls.txt file. Usually I would use an OPEN API documentation generator for this.
+   Available endpoints and how to curl them are in the curls.txt file. Usually I would use an OPEN API documentation generator for this.
 
 
 
